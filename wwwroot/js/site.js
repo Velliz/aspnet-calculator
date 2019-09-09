@@ -29,7 +29,7 @@ $(function() {
                 strings: prepare
             },
             success: function(data) {
-                results.val(data.val);
+                results.val(data.results);
             },
             error: function(jxhr, error, code) {
 
