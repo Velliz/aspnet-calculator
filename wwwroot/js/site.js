@@ -32,7 +32,7 @@ $(function() {
                 results.val(data.results);
             },
             error: function(jxhr, error, code) {
-
+                results.val("expression error");
             }
         });
     });
