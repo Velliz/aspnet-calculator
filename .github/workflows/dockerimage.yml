@@ -12,3 +12,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag aspnet-calculator:$(date +%s)
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: diditvelliz/aspnet-calculator
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_PASSWORD }}
