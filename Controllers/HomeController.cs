@@ -9,18 +9,14 @@ namespace callculator.Controllers
     public class HomeController : Controller
     {
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         [HttpGet]
-        public IActionResult Callculator()
+        public IActionResult Privacy()
         {
             return View();
         }
@@ -42,6 +38,7 @@ namespace callculator.Controllers
             Evaluator evaluator = new Evaluator(postfixNotation);
 
             number.Results = evaluator.Evaluate();
+
             return Json(number);
         }
 
